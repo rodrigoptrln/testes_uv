@@ -1,0 +1,74 @@
+# Configurações de segurança e qualidade de código
+[project]
+name = "testes-uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+
+authors = [
+    {name = "Rodrigo Paterlini", email = "rodpater@gmail.com"},
+]
+
+license = {text = "MIT"}
+
+keywords = ["testing", "uv"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.12",
+]
+
+# Configurações de dependências
+dependencies = []
+
+# Configurações de testes
+[tool.pytest]
+testpaths = ["tests"]
+
+# Configurações ruff
+[tool.ruff]
+indent-width = 4
+target-version = "py312"
+
+# Configurações de cobertura de código
+exclude = [
+  ".git",
+  ".venv",
+  "build",
+  "dist",
+  "docs",
+  "*.pyc",
+  "__pycache__",
+  "tests",
+  "**/*.py",
+  "**/__init__.py",
+]
+
+# Configurações de linting
+select = ["E", "W", "F", "C90", "B"]
+
+# Configurações para ignorar determinadas regras
+ignore = ["E203", "E501"]
+
+# Configurações de formatação
+[tool.ruff.line-breaks]
+
+# Especifica o tipo de quebra de linha
+style = "unix"
+
+# Configurações de segurança e qualidade de código
+[tool.ruff.security]
+enabled = true
+
+# Configurações de estilo de código
+[tool.ruff.style]
+
+# Habilita regras de estilo de código
+enabled = true
+
+# Configurações para plugins adicionais
+[tool.ruff.plugins]
+# Plugin de formatação de código
+black = true [tool.black]
+line-length = 88
