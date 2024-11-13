@@ -31,18 +31,43 @@ testpaths = ["tests"]
 indent-width = 4
 target-version = "py312"
 
-# Configurações de cobertura de código
+# Configurações de pre-commit# Configurações de cobertura de código
 exclude = [
-  ".git",
-  ".venv",
-  "build",
-  "dist",
-  "docs",
-  "*.pyc",
-  "__pycache__",
-  "tests",
-  "**/*.py",
-  "**/__init__.py",
+    ".git",
+    ".venv",
+    "build",
+    "dist",
+    "docs",
+    "*.pyc",
+    "__pycache__",
+    "tests",
+#    "**/*.py",
+#    "**/__init__.py",
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
 ]
 
 # Configurações de linting
@@ -70,5 +95,7 @@ enabled = true
 # Configurações para plugins adicionais
 [tool.ruff.plugins]
 # Plugin de formatação de código
-black = true [tool.black]
+black = true
+
+[tool.black]
 line-length = 88
